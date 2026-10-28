@@ -242,7 +242,7 @@
     {
       category: "",
       question: "Kuzey bu sahnede fırına gelen adama ne dedi?",
-      image: "https://i.ibb.co/jkHdmQhF/0dea9d04a2b6266adac290c14b90430f.jpg",
+      image: "https://i.hizliresim.com/jdra52pc.jpg",
       video: "https://www.youtube.com/watch?v=ZaN-haaGXWs",
       options: [
         "Ekmek kalmadı kardeşşş, sonra gel.",
@@ -256,7 +256,7 @@
     {
       category: "",
       question: "Mersinli abinin mikrofon uzatılınca kurduğu efsane cümle: 'Ankara....'",
-      image: "https://i.ibb.co/wrsnHhbw/beceluk-photo-1.jpg",
+      image: "https://i.hizliresim.com/7jsn3kki.jpg",
       video: "https://www.youtube.com/watch?v=alckc5Pofrs",
       fallbackBg: "from-amber-900/60 via-surface-card to-primary-container/20",
       options: [
@@ -271,7 +271,7 @@
     {
       category: "",
       question: "Alttaki türbanlı hanımefendinin lakabı nedir?",
-      image: "https://i.ibb.co/7tfqTsr7/Ekran-g-r-nt-s-2026-10-23-142959.png",
+      image: "https://i.hizliresim.com/iot1vllj.png",
       video: "https://www.youtube.com/shorts/H2cyg2pZ9h8",
       options: [
         "Bilge Anne",
@@ -285,7 +285,7 @@
     {
       category: "",
       question: "Düğününü izlerken gelen “robot gibi dans ediyorsun” söylemine kızan gelin hanım ne cevap vermiştir?",
-      image: "https://i.ibb.co/NdCRnssJ/Ekran-g-r-nt-s-2026-10-23-145309.png",
+      image: "https://i.hizliresim.com/hiw7xxta.png",
       video: "https://www.youtube.com/watch?v=fP93I2whFEg",
       options: [
         "Sen çok güzel dans ediyosun sanki",
@@ -299,7 +299,7 @@
     {
       category: "",
       question: "Bu robot neden sitemkar?",
-      image: "https://i.ibb.co/zTrqgqBr/Ekran-g-r-nt-s-2026-10-23-145725.png",
+      image: "https://i.hizliresim.com/o6xgxnp7.png",
       video: "https://www.youtube.com/watch?v=Yh2nA8SLCtY",
       options: [
         "Tarlası yandığı için sitemkar şekilde ağıt yakıyor",
@@ -313,7 +313,7 @@
     {
       category: "",
       question: "Bu amca neyden dert yanıyor?",
-      image: "https://i.ibb.co/0y3FL8XM/images.jpg",
+      image: "https://i.hizliresim.com/ng9hb6mx.jpg",
       video: "https://www.youtube.com/shorts/E14ln8tgzNc",
       options: [
         "Elindeki tepsideki kıymayı gösterip fiyatının fahiş olmasın sebebiyle",
@@ -327,7 +327,7 @@
     {
       category: "",
       question: "Gifteki kedi ne sesi çıkarıyor?",
-      image: "https://i.ibb.co/QLNXLKJ/das-war-ein-befehl-das-war-ein-befehl-cat.gif",
+      image: "https://i.hizliresim.com/fgjekgxt.gif",
       video: "https://www.youtube.com/watch?v=yaqyPh2jQgw",
       options: [
         "“MeooowwWW”",
@@ -341,7 +341,7 @@
     {
       category: "",
       question: "Cami hocasına 'Hocam hiç güler misiniz?' diye sorulunca hocanın verdiği yanıt:",
-      image: "https://i.ibb.co/Mk2fC75Z/Ekran-g-r-nt-s-2026-10-23-155718.png",
+      image: "https://i.hizliresim.com/lvu8azs2.png",
       video: "https://www.youtube.com/watch?v=AYLnGsWj7us",
       options: [
         "Ben imamım gülmem.",
@@ -355,7 +355,7 @@
     {
       category: "",
       question: "Taksi gaspçısı musa beyin kendine has sözü nedir",
-      image: "https://i.ibb.co/3yD1w5SN/685ba5b7f6421a1ec81f00e1.webp",
+      image: "https://i.hizliresim.com/3hl1dvxw.jpg",
       video: "https://www.youtube.com/watch?v=cpK7SIby56A",
       options: [
         "Herkes kendine yakışanı yapar",
@@ -770,21 +770,19 @@
     statSkipped.textContent = skippedCount;
     scoreDetailEl.textContent = `En Yüksek Seri: x${maxStreak} 🔥`;
 
-    if (score >= 1200) {
-      scoreTitle.textContent = "🏆 Meme Profesörü";
-      commentEl.textContent = "Olağanüstü! Türk internet kültürünün yaşayan ansiklopedisisin. Tencere tava seti senin hakkın!";
+    commentEl.textContent = `${correctCount} / ${QUIZ_QUESTIONS.length} soruyu doğru cevapladın.`;
+
+    if (correctCount >= 9) {
+      scoreTitle.textContent = "Tencere tava kazandın!!";
       badgeIcon.textContent = "military_tech";
-    } else if (score >= 700) {
-      scoreTitle.textContent = "🔥 Kıdemli Capsçi";
-      commentEl.textContent = "Gayet başarılı! Sahnelere ve repliklere oldukça hakimsin, küçük detayları da kaparsan zirve senin.";
+    } else if (correctCount >= 6) {
+      scoreTitle.textContent = "Olacak olacak..";
       badgeIcon.textContent = "emoji_events";
-    } else if (score >= 350) {
-      scoreTitle.textContent = "📱 Çaylak Memeci";
-      commentEl.textContent = "Kötü değil! Birkaç video daha izleyip internet sokaklarında turlaman lazım.";
+    } else if (correctCount >= 3) {
+      scoreTitle.textContent = "Isınmaya başladın";
       badgeIcon.textContent = "thumb_up";
     } else {
-      scoreTitle.textContent = "📺 Mağara Sakini";
-      commentEl.textContent = "İnternete biraz uzak kalmışsın sanki! Tekrar oyna ve Türk meme tarihini keşfet.";
+      scoreTitle.textContent = "Puu, yazıklar olsun!";
       badgeIcon.textContent = "sentiment_very_dissatisfied";
     }
   }
